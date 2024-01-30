@@ -4,10 +4,9 @@ void	ft_print_numbers(void)
 {
 	char	c;
 
-	c = '0';
-	while (i <= '9')
+	c = '0' - 1;
+	while (++c <= '9')
 	{
 		write(1, &c, 1);
-		c++;
 	}
 }
