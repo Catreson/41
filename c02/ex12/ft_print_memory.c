@@ -2,13 +2,7 @@
 
 void	hd_write(char c)
 {
-	char	tmp;
-
-	if (c <= 9)
-		tmp = '0' + c;
-	else
-		tmp = 'a' + c - 10;
-	write(1, &tmp, 1);
+	write(1, ("0123456789abcde" + c), 1);
 }
 
 void	addr_write(void *addr)

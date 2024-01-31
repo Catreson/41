@@ -2,22 +2,8 @@
 
 void	hd_write(char c)
 {
-	char	tmp;
-	char	tmp2;
-
-	tmp2 = c / 16;
-	if (tmp2 <= 9)
-		tmp = '0' + tmp2;
-	else
-		tmp = 'a' + tmp2 - 10;
-	write(1, &tmp, 1);
-	tmp2 = c % 16;
-	if (tmp2 <= 9)
-		tmp = '0' + tmp2;
-	else
-		tmp = 'a' + tmp2 - 10;
-	write(1, &tmp, 1);
-
+	write(1, ("0123456789abcdef" + c / 16), 1);
+	write(1, ("0123456789abcdef" + c % 16), 1);
 }
 
 void	non_printable(char c)
