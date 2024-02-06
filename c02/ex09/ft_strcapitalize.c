@@ -23,7 +23,8 @@ char	*ft_strcapitalize(char *str)
 	{
 		if (is_new && str[i] >= 'a' && str[i] <= 'z')
 			str[i] += 'A' - 'a';
-		if (str[i] == ' ' || str[i] == '\t' || str[i] == '-' || str[i] == '+')
+		if (!(str[i] >= 'a' && str[i] <= 'z')
+			&& !(str[i] >= '0' && str[i] <= '9'))
 			is_new = 1;
 		else
 			is_new = 0;

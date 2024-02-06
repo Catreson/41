@@ -2,7 +2,7 @@
 
 void	hd_write(char c)
 {
-	write(1, ("0123456789abcde" + c), 1);
+	write(1, ("0123456789abcdef" + c), 1);
 }
 
 void	addr_write(void *addr)
@@ -82,3 +82,13 @@ void	*ft_print_memory(void *addr, unsigned int size)
 	}
 	return (addr);
 }
+
+/*int	main(void)
+{
+	char	str[] = 
+	"Bonjour les aminches\t\x0a\tc\x07
+	 est fou.tout.ce qu onpeut faire avec...print_memory.....lol.lol. .";
+
+	ft_print_memory(str, 92);
+	return (0);
+}*/
